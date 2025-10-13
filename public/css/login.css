@@ -1,0 +1,11 @@
+/* Background gradient modern */
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    min-height: 100vh;
+}
+
+/* Bagian kanan (foto/ilustrasi login) */
+.bg-login-image {
+    background: url("/public/img/roblox_logo.png") center center;
+    background-size: cover;
+}
