@@ -32,7 +32,7 @@ class SessionController extends Controller
 
         if (Auth::attempt($infologin)) {
             // redirect ke departemen.index sesuai resource route
-            return redirect()->route('departemen.index')->with('success', 'Berhasil Login');
+            return redirect()->route('dashboard')->with('success', 'Berhasil Login');
         } else {
             // redirect balik ke halaman login
             return redirect()->route('login')->with('error', 'Username atau Password Salah');

@@ -1,11 +1,125 @@
-/* Background gradient modern */
-.bg-gradient-primary {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
-    min-height: 100vh;
+/* Reset & Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* Bagian kanan (foto/ilustrasi login) */
-.bg-login-image {
-    background: url("/public/img/roblox_logo.png") center center;
+body, html {
+    height: 100%;
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
+}
+
+/* Fullscreen Background */
+.login-container {
+    background: url("/img/bg_login.png") no-repeat center center;
     background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Main Login Box */
+.login-content {
+    padding: 60px 40px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+}
+
+/* ROBLOX Logo */
+.roblox-logo {
+    width: 600px;
+    max-width: 90%;
+    margin-bottom: 40px;
+}
+
+/* Input Fields - Tema Gelap */
+.login-form input {
+    width: 100%;
+    padding: 16px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    background-color: #222;    /* gelap */
+    color: #eee;               /* teks putih */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-form input::placeholder {
+    color: #bbb;  /* placeholder warna abu muda */
+}
+
+/* Fokus input agar lebih jelas */
+.login-form input:focus {
+    outline: none;
+    background-color: #333; /* agak lebih terang pas fokus */
+    color: #fff;
+}
+
+/* Tombol Login - default abu-abu */
+.btn-login {
+    width: 100%;
+    padding: 16px;
+    background-color: #888888; /* abu */
+    color: #000;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: 16px;
+}
+
+/* Hover tombol login */
+.btn-login:hover {
+    background-color: #ffffff; /* putih */
+    color: #000;
+}
+
+/* Saat ditekan (active) */
+.btn-login:active {
+    background-color: #ffffff; /* putih */
+    color: #000;
+}
+
+/* Optional Links */
+.extra-links {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.extra-links a {
+    color: #ddd;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+/* Alerts */
+.alert {
+    background-color: rgba(255, 0, 0, 0.1);
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 650px) {
+    .roblox-logo {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+
+    .login-content {
+        padding: 40px 20px;
+        max-width: 90vw;
+    }
 }
